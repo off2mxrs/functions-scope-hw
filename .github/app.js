@@ -9,70 +9,58 @@
     // 3. The code doesn't crash and the console doesn't print 'Undefined'.
 
     ////////////////////////////////
-    // 2.
+    // 2. PALINDROME
     
-    // function checkPalindrome(string) {
+    function checkPalindrome(string) {
         
-    //     // convert the string to lowercase
-    //    const lowerCase = string.toLowerCase();
-    //     'cat'
-    //     // reverse the string
-    //     const lettersArray = lowerCase
-    //     'tac'
-    //     // compare lowercase string w/ the reversed string
-    //     'cat' === 'tac'
-    // }
-
-    function reverseString(str) {
-        return str;
-    }
-
-    console.log(reverseString('Hello'));
-
-    ////////////////////////////
-    // 3. Check a list
-
-    const students = [
-        'Jill',
-        'Harold',
-        'joe',
-        'Manny',
-        'Frank',
-    ]
-    
-    function checkForStudent() {
-        for (let i = 0; i < students.length; i++) {
-           if (students[i] === 'Manny') {
-             console.log('the student is Manny ==>', students[i]);  
-             return true;
-           } 
+        // convert the string to lowercase
+       const lowerCase = string.toLowerCase();
+        
+        // reverse the string
+        const reword = lowerCase.split('').reverse().join('');
+        
+        if(lowerCase === reword){
+            return true
+        } else {
+            return false
         }
-        console.log('We didnt find Manny');
-        return false;
+        // compare lowercase string w/ the reversed string
+       
+ }
+ const wordIsPalindrome = checkPalindrome('Racecar');
+ console.log(wordIsPalindrome);
+
+
+///////////////////////////////////////////////
+// 3. Check a list
+
+// Loop over the students array
+// compare the name against the current student
+// if name matches return true
+function checkForStudent(name, students) {
+   console.log(name);
+   console.log(students);
+
+   for (let i = 0; i < students.length; i++) {
+       if (students[i] === name) {
+           return true
+       }
+   }
+}
+
+const studentIncluded =  checkForStudent('Sally', ['Sally', 'Kyle']);
+console.log(studentIncluded);// this should return true
+
+
+// ////////////////////////////////////////
+// 4. Sum Array
+function sumArray() {
+    for (let i = 0; i <= sumArray.length; i++) {
+        let array = sumArray[i] + sumArray[i]
+        return true  
     }
     
-    checkForStudent();
-
-//     const studentPresent = rollCall('Jackie', ['Kim', 'George', 'Jackie']);
-//     const list = [
-//         'Jill',
-//         'Harold',
-//         'joe',
-//         'Manny',
-//         'Frank',
-//     ]
-
-//     function rollCall(name,list) {
-//         for (let i = 0; i < list; i++) {
-//             if (name === list[i]);
-//             return true;
-//         }
-//     }
-//  console.log(rollCall('joe',list));
-    
-////////////////////////////////////////
-// 4. Sum Array
-
-const sum = sumArray([1, 2, 3, 4, 5, 6]); {
-    console.log(sum.reduce(a, b), a + b, 0);
 }
+
+const sum = sumArray([1, 2, 3, 4, 5, 6]);
+console.log(sum);     
